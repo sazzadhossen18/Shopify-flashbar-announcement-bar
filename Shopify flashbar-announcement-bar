@@ -1,0 +1,129 @@
+       
+  <div class="flash-infos">
+
+     {%- if section.settings.flash_bar_1 != blank -%}
+    <div class="flash-info">
+      <span class="ticker_arrow">➟</span>
+        <h3  style="font-size:{{ section.settings.slider_text_size }};color:{{ section.settings.slider_text_color }}"> {{ section.settings.flash_bar_1 }}</h3>
+    </div>
+    {% endif %}
+
+    {%- if section.settings.flash_bar_2 != blank -%}
+    <div class="flash-info">
+      <span class="ticker_arrow">➟</span>
+        <h3  style="font-size:{{ section.settings.slider_text_size }};color:{{ section.settings.slider_text_color }}"> {{ section.settings.flash_bar_2 }}</h3>
+    </div>
+    {% endif %}
+
+  {%- if section.settings.flash_bar_3 != blank -%}
+    <div class="flash-info">
+      <span class="ticker_arrow">➟</span>
+        <h3  style="font-size:{{ section.settings.slider_text_size }};color:{{ section.settings.slider_text_color }}"> {{ section.settings.flash_bar_3 }}</h3>
+    </div>
+    {% endif %}
+
+  {%- if section.settings.flash_bar_4 != blank -%}
+    <div class="flash-info">
+      <span class="ticker_arrow">➟</span>
+        <h3  style="font-size:{{ section.settings.slider_text_size }};color:{{ section.settings.slider_text_color }}"> {{ section.settings.flash_bar_4 }}</h3>
+    </div>
+    {% endif %}
+
+
+  {%- if section.settings.flash_bar_5 != blank -%}
+    <div class="flash-info">
+      <span class="ticker_arrow">➟</span>
+        <h3  style="font-size:{{ section.settings.slider_text_size }};color:{{ section.settings.slider_text_color }}"> {{ section.settings.flash_bar_5 }}</h3>
+    </div>
+    {% endif %}
+
+  {%- if section.settings.flash_bar_6 != blank -%}
+    <div class="flash-info">
+      <span class="ticker_arrow">➟</span>
+        <h3  style="font-size:{{ section.settings.slider_text_size }};color:{{ section.settings.slider_text_color }}"> {{ section.settings.flash_bar_6 }}</h3>
+    </div>
+    {% endif %}
+
+
+      
+  </div>
+  
+  
+  <style>
+   .flash-infos {
+     padding:0px 10px;
+     background:{{ section.settings.bg_color }};
+     color:#FFF;
+     display:flex;
+     width:100%;
+     max-width:100%;
+     align-items:center;
+     
+   }
+    .flash-info  {
+      padding:0;
+      display:flex !important;
+      align-items:center;
+      justify-content:center;
+    }
+    .flash-info svg {
+      fill:#FFF;
+      margin-right:7px;
+      width:auto;
+      height:28px;
+    } 
+    span.ticker_arrow {
+    font-size: 20px;
+    margin-right: 6px;
+  }
+    .flash-info.truck svg  {
+      height:30px;
+    }
+    .flash-info-pulse {
+      animation: flash-pulse 2s infinite;
+    }
+    @keyframes flash-pulse {
+      0% {
+        opacity:0;
+      }
+      
+      50% {
+        opacity:1;
+      }
+
+      100% {
+        opacity:1;
+      }
+    }
+  </style>
+
+  <script type="text/javascript">      
+    
+    $('.flash-infos').slick({
+      dots: false,
+      infinite: true,
+      speed: 300,        
+      autoplay: true,
+      autoplaySpeed: 3000,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      arrows: false,
+      responsive: [          
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }          
+      ]
+    });
+ 
+  </script>
